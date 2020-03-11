@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7b1c9f9e5e3756ea3c19592b00d6f323",
+    "revision": "4bcf81732cf249d7a9cbf183949c41c9",
     "url": "/track-the-pack/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/track-the-pack/static/css/2.b0bb7f2c.chunk.css"
   },
   {
-    "revision": "917557ebff045734aecc",
+    "revision": "939dd97ab2672bf19223",
     "url": "/track-the-pack/static/css/main.2153ad7a.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/track-the-pack/static/js/2.f1aedc75.chunk.js"
   },
   {
-    "revision": "917557ebff045734aecc",
-    "url": "/track-the-pack/static/js/main.10f78b45.chunk.js"
+    "revision": "939dd97ab2672bf19223",
+    "url": "/track-the-pack/static/js/main.6a6351c0.chunk.js"
   },
   {
     "revision": "0fb1a7c29c7751feaa07",
