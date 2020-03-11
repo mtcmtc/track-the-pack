@@ -1,0 +1,53 @@
+.ttp__viewport--responsive{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+  width:100%;
+  margin:0 auto;
+}
+
+.ttp__viewport--responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+.video_detail{
+	color:#fff;
+}
+.video_detail__overlay{
+	background-color:#000;
+    background-position: 0;
+	background-size:cover;
+	height:100%;
+	left:0;
+	position:absolute;
+	top:0;
+	width:100%;
+}
+
+.video_detail{
+	& h2{
+		font-size:1rem;
+	}
+	& p, button{
+		font-size:.7rem;
+	}
+	& button{
+		color: #0C2340;
+		background-color: #fff;
+	}
+}
+
+@media screen and (min-width:768px){
+	.video_detail{
+		& h2{
+			font-size:2rem;
+		}
+		& p{
+			font-size:1rem;
+		}
+	}
+}
