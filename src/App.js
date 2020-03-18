@@ -78,7 +78,7 @@ class App extends React.Component {
         }, () => { this.state.ytPlayer.playVideo() })
       }
     }else{
-      window.open('https://www.nba.com/timberwolves/video/search/?ls=channav&query=track%20the%20pack', '_blank');
+      window.open('https://www.nba.com/timberwolves/video/search/?ls=channav&query=track%20the%20pack', '_blank', 'noopener');
     }
   }
 
@@ -121,37 +121,28 @@ class App extends React.Component {
     })
   }
 
-  playerStateObserver = () => {
-    if(this.state.playerState === 2){
-      setTimeout(() => {
-        if(this.state.playerState === 2){
-          // console.log('pausing')
-          this.setState({
-            playing: false,
-          })
-        }else {
-          // console.log('scrubbing');
-          return false;
-        }
-      }, 300);
-    }else{
-      this.setState({
-        playing: [1, 3].indexOf(this.state.playerState) > -1,
-      })
-    }
-
-  }
-
   onPlayerStateChange = event => {
-    const prevState = this.state.playerState;
-
-    // console.log(event);
-
     this.setState({
-      playerState: event.data,
-      playerTime: event.target.getCurrentTime(),
-    }, () =>{ 
-      if(this.state.playerState !== -1 && prevState !== 3){this.playerStateObserver()}; 
+      playerState: event.data
+    }, () =>{
+      if(event.data === 2){
+        setTimeout(() =>{
+          if(this.state.playerState === 2){
+            this.setState({
+              playing: false
+            })
+          }else{
+            return false;
+          }
+        }, 300)
+      }else if(this.state.playerState === -1){
+        this.setState({
+          playing: false
+        })
+      }else
+        this.setState({
+          playing: true
+        });
     })
 
   }

@@ -4,12 +4,8 @@ import './TtpErrorPage.scss';
 import './VideoDetail.scss';
 
 const TtpErrorPage = ({handlePlayButton}) => {
-	const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1024 })
-  // const isBigScreen = useMediaQuery({ minDeviceWidth: 1440 })
   const isTabletOrMobile = useMediaQuery({ maxWidth: 767 })
-  // const isTabletOrMobileDevice = useMediaQuery({ maxDeviceWidth: 1023 })
   const isPortrait = useMediaQuery({ orientation: 'portrait' })
-  // const isRetina = useMediaQuery({ minResolution: '2dppx' })
 	return(
 		<div className="ttp__errorpage">
 		<div className={'ttp__toyota'}><p className={'text-center'}style={{'margin':0,'color':'#fff'}}><span className={`align-middle`}>PRESENTED BY </span><img alt={'toyota logo'} src={'https://www.nba.com/resources/static/team/v2/timberwolves/projects/2019-20/ttp/toyota_logo.svg'} style={{'maxWidth':'150px'}}/></p></div>

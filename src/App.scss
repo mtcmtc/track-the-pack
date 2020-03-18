@@ -28,9 +28,6 @@ body{
   			.ttp__playlist{
 	  			height: 0;
 	  		}
-	  		.ttp__info{
-	  			height:45vh;
-	  		}
   		}
 
   		overflow:hidden;
@@ -80,7 +77,7 @@ body{
 		height:100vh;
 		overflow: hidden;
 		.ttp__toyota{display:none;}
-		.ttp__viewport--responsive, .ttp__menu, .ttp__body__slide > div, .video_detail__block{
+		.ttp__viewport--responsive, .ttp__menu, .ttp__body__slide > div,{
 			transition: opacity .5s, transform .5s;
 		}
 
