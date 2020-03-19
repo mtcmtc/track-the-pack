@@ -202,7 +202,8 @@ class App extends React.Component {
         return(
           <div class="ttp__loading">
             <div class="abs-center--vertical position-absolute text-center w-100">
-              <img class="img-fluid w-25" alt="loading image" src="https://www.nba.com/.element/media/2.0/teamsites/timberwolves/media/mntw-jersey-loader-aen2-171219.gif" />
+              <div class="lds-mntw"><div></div><div></div><div></div></div>
+              <p>LOADING</p>
             </div>
           </div>
         )
