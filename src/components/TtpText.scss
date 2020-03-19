@@ -6,14 +6,22 @@
   white-space: normal;
 
   h3, p{
-  	max-width: 90%;
-	  margin:0 auto;
-	  font-size:1rem;
+    margin:0 auto;
+    font-size:1rem;
   }
 
   h3{
-  	color: #78BE20;
-  	font-size:1.5rem;
+    color: #78BE20;
+    font-size:1.5rem;
   }
 
+}
+
+@media screen and (min-width: 568px){
+  .ttp__text{
+    h3, p{
+      max-width:90%;
+      font-size:1.2rem;
+    }
+  }
 }

@@ -204,12 +204,16 @@ class App extends React.Component {
           <TtpMenu vid={videoId} playing={playing} menuIndex={menuIndex} updateMenu={this.updateMenu} />
           <div className={`ttp__body`}>
             <div className={`ttp__body__slide` + ` ttp__body__slide--` + menuIndex}>
-              <VideoList videos={videos} selected={selectedVideo} playing={playing} handleVideoSelect={this.handleVideoSelect}/>
+              <VideoList 
+                videos={videos} 
+                selected={selectedVideo} 
+                playing={playing} 
+                handleVideoSelect={this.handleVideoSelect}/>
               <TtpText 
                 className={`ttp__info`} 
                 headerText={`ABOUT TRACK THE PACK`} 
                 bodyText={`There are so many stories to tell throughout a season. On the court. At home. At practice. In the community. Track The Pack is here to tell you those stories in a unique and behind-the-scenes way that you can’t experience anywhere else.`}
-              />
+                image={`https://www.nba.com/resources/static/team/v2/timberwolves/projects/2019-20/ttp/ttp_toyota_ad_insert.jpg`} />
             </div>
           </div>
           <TtpFooter />
