@@ -7,12 +7,15 @@ body{
   top:50%;
   transform: translateY(-50%);
 }
-
+.ttp__loading{
+	background-color: #0a233a;
+	height:100vh;
+}
 .ttp__container{
-  background-color:#0C2340;
+  background-color: #0C2340;
   font-family: Futura,"Trebuchet MS", Arial, sans-serif;
   margin:0 auto;
-  overflow-x: hidden;
+  overflow: hidden;
   &.menuIndex{
 
   	&--0{
@@ -29,8 +32,6 @@ body{
 	  			height: 0;
 	  		}
   		}
-
-  		overflow:hidden;
   	}
 
   }
@@ -105,9 +106,10 @@ body{
 						opacity:0;
 						transform: translateY(100%);
 					}
-	  		}
-	  		.ttp__playlist{
-	  			height: auto;
+
+					.ttp__playlist{
+		  			height: auto;
+		  		}
 	  		}
 	  	}
 

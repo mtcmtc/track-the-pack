@@ -198,6 +198,15 @@ class App extends React.Component {
     let body;
 
     if (!error) {
+      if(!selectedVideo){
+        return(
+          <div class="ttp__loading">
+            <div class="abs-center--vertical position-absolute text-center w-100">
+              <img class="img-fluid w-25" alt="loading image" src="https://www.nba.com/.element/media/2.0/teamsites/timberwolves/media/mntw-jersey-loader-aen2-171219.gif" />
+            </div>
+          </div>
+        )
+      }
       return(
         <div className={`ttp__container container-fluid p-0` + ` menuIndex--` + menuIndex + ` ttp__player--` + (playing ? `playing` : `paused`)}>
           <VideoDetail key={videoId} video={selectedVideo} playing={playing} playerLoaded={playerLoaded} played={played} handlePlayButton={this.handlePlayButton} handlePauseButton={this.handlePauseButton}/>

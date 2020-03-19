@@ -15,7 +15,7 @@ const VideoList = ({videos, selected, playing, handleVideoSelect}) => {
       return <VideoItem video={video} handleVideoSelect={handleVideoSelect} id={videoId} key={videoId} active={selectedId === videoId}/>
   });
 
-  return <div className={`ttp__playlist ` + (playing  ? `ttp__playlist--hidden` : ``)}>{renderedVideos}</div>
+  return <div className={`ttp__playlist pb-3 ` + (playing  ? `ttp__playlist--hidden` : ``)}>{renderedVideos}</div>
 }
   
 export default VideoList;
