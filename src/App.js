@@ -125,7 +125,11 @@ class App extends React.Component {
     this.setState({
       playerState: event.data
     }, () =>{
-      if(event.data === 2){
+      if(event.data === 5){
+        this.setState({
+          playing: false
+        })
+      }else if(event.data === 2){
         setTimeout(() =>{
           if(this.state.playerState === 2){
             this.setState({
@@ -139,12 +143,10 @@ class App extends React.Component {
         this.setState({
           playing: false
         })
-      }else
-        this.setState({
-          playing: true
-        });
+      }else this.setState({
+        playing: true
+      });
     })
-
   }
 
   onPlayerReady = event => {
@@ -195,20 +197,15 @@ class App extends React.Component {
       menuSelect,
       menuIndex } = this.state
 
-    let body;
-
     if (!error) {
-      if(!selectedVideo){
-        return(
-          <div class="ttp__loading">
-            <div class="abs-center--vertical position-absolute text-center w-100">
-              <div class="lds-mntw"><div></div><div></div><div></div></div>
-              <p>LOADING</p>
-            </div>
-          </div>
-        )
-      }
       return(
+        <React.Fragment>
+        <div className={'ttp__loading ttp__loading' + (selectedVideo && '--loaded')}>
+          <div className="abs-center--vertical position-absolute text-center w-100">
+            <div className="lds-mntw"><div></div><div></div><div></div></div>
+            <p>LOADING</p>
+          </div>
+        </div>
         <div className={`ttp__container container-fluid p-0` + ` menuIndex--` + menuIndex + ` ttp__player--` + (playing ? `playing` : `paused`)}>
           <VideoDetail key={videoId} video={selectedVideo} playing={playing} playerLoaded={playerLoaded} played={played} handlePlayButton={this.handlePlayButton} handlePauseButton={this.handlePauseButton}/>
           <TtpMenu vid={videoId} playing={playing} menuIndex={menuIndex} updateMenu={this.updateMenu} />
@@ -228,6 +225,7 @@ class App extends React.Component {
           </div>
           <TtpFooter />
         </div>
+        </React.Fragment>
       )
     }
 

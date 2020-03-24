@@ -1,3 +1,4 @@
+$mntw-blue: #0C2340;
 body{
 	color:#fff;
 	font-family: Futura,"Trebuchet MS", Arial, sans-serif;
@@ -9,9 +10,19 @@ body{
   transform: translateY(-50%);
 }
 .ttp__loading{
-	background-color: #0a233a;
-	color: #fff;
-	height:100vh;
+  background-color: $mntw-blue;
+  color: #fff;
+  height: 100vh;
+  opacity: 1;
+  overflow: hidden;
+  transition: height .5s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+
+	&--loaded{
+		height: 0;
+	}
 
 	.lds-mntw {
 	  display: inline-block;
@@ -53,7 +64,7 @@ body{
 }
 
 .ttp__container{
-  background-color: #0C2340;
+  background-color: $mntw-blue;
   margin:0 auto;
   overflow: hidden;
   &.menuIndex{
@@ -139,7 +150,7 @@ body{
 
 	  	&--1{
 	  		.ttp__viewport--responsive, .video_detail__block{ transform:translateY(-40vh); }
-	  		.ttp__menu{ transform:translate(-50%, 0vh); }
+	  		.ttp__menu{ transform:translate(-50%, -40vh); }
 	  		.ttp__body__slide{
 	  			transform: translateX(0);
 					> div:nth-child(1){

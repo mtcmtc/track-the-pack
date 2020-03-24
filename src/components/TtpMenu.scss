@@ -71,21 +71,13 @@
 
 @media screen and (min-width:768px) and (orientation: landscape){
 	.ttp__menu{
-	    position: fixed;
-	    top: 50%;
-	    left: 50%;
-	    transform: translate(-50%, 15vh);
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, -210px);
 
-	    &--hidden{
-				display:none;
-			}
-
-	  //   li.ttp__menu__item{
-			// 	&--active{
-			// 		span{
-			// 	    background-color: transparent;
-			// 		}
-			// 	}
-			// }
+    &--hidden{
+			display:none;
+		}
 	}
 }
